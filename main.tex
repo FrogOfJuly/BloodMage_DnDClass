@@ -41,7 +41,8 @@
 
 \title{Blood Mage\\
 \small{Homebrew class}\\
-Image credit\footnote{
+
+Credits\footnote{
 \href{https://static1.srcdn.com/wordpress/wp-content/uploads/2024/12/fireball-blood-mage-from-path-of-exile-2.jpg}{The first page}: \href{https://www.grindinggear.com/?page=index}{Grinding Gear Games}, \href{}{Path of Exile 2}
 }
 \footnote{
@@ -53,8 +54,11 @@ Image credit\footnote{
 \footnote{
 \href{https://www.deviantart.com/shabow/art/Bloodsucker-407309112}{The fourth page}: \href{https://www.deviantart.com/shabow}{shabow}
 }
+\footnote{
+\href{https://github.com/rpgtex/DND-5e-LaTeX-Template/tree/dev}{DnD \LaTeX\ Template}
 }
-\author{FrogOfJuly}
+}
+\author{\href{https://frogofjuly.github.io}{FrogOfJuly}}
 \date{\today}
 
 \let\cleardoublepage=\clearpage
@@ -76,7 +80,7 @@ Image credit\footnote{
 \begin{DndTable}[color=DmgSlateGrey]{XX}
  Trait & Description \\
  Primary Ability  & Constitution \\
- Hit Point Die  & D8 per Blood Mage level \\
+ Hit Point Die  & D10 per Blood Mage level \\
  Saving Throw Proficiencies  & Constitution and Charisma \\
  Skill Proficiencies  & \textit{Choose 2}: Arcana, Deception, History, Intimidation, Investigation, Persuasion, Survival \\
  Weapon Proficiencies & Simple Weapons \\
@@ -111,9 +115,22 @@ Geared toward battle, each spell is a balancing act between death and outstandin
 
 \subsection{Blood Mage Class Features}
 
+\subsubsection{Level 1: Call of the Abyss}
+
+You tapped the source of power that underlies how your body functions. 
+Take too much and spiral of self consumption will lead to madness and death. 
+Some powers are too taxing and you will experience how your own flesh cries for help. 
+
+\paragraph{Price of power} Necrotic damage that you receive cannot be reduced or prevented.
+
+\paragraph{Fatigue Levels} Some effects will apply Fatigue, while you have this condition you experience the following effects. This condition is cumulative. Each time you receive it, you gain 1 Fatigue Level. 
+\paragraph{Weakness} When you receive non-necrotic damage, you receive additional one necrotic damage per Fatigue Level.
+\paragraph{Decay} Your maximum health is reduced by 1d4 + 1 per Fatigue Level. You roll a die each time you get Fatigue Level.
+\paragraph{Removing Fatigue} Finishing Long Rest removes all your Fatigue Levels. Finishing Short Rest removes half your Fatigue levels rounded up. Succeeding Death Saving Throw(critically) removes one(all) Fatigue Level(s).
+
 \subsubsection{Level 1: Carnal Invocations}
 
-Hidden properties of living flesh allow Blood Mage to invoke their gruesome powers. You pick one invocation of your choice.
+Hidden properties of living flesh allow Blood Mage to invoke their gruesome powers. You pick two invocations of your choice.
 Invocations are described in the "Carnal Invocation Options" section later in this class's description.
 
 \paragraph{Replacing and Gaining Invocations} Whenever you gain a Blood Mage level, you can replace one of your invocations with another one. 
@@ -122,13 +139,26 @@ When you gain certain Blood Mage levels, you gain more invocations of your choic
 
 You can't pick the same invocation more than once unless its description says otherwise.
 
+\tikz[remember picture,overlay, blend mode=multiply] \node[anchor=north, inner sep=-5pt] at (current page.north) {\includegraphics[scale=1.35]{resources/Blood_mage_top.png}};
+
+\begin{table*}[t]
+  \includegraphics[scale=1.0]{resources/Blood_mage_top_tranparent.png}
+
+  \caption{\DndFontTableTitle{Blood Mage Features}}\label{tab:bm_features}
+
+  \begin{tabularx}{\linewidth}{p{0.7cm}p{2cm}Xp{2cm}p{1.5cm}p{1.5cm}p{1cm}p{1cm}}
+    \textbf{Level}                  & \textbf{Proficiency bonus} & \textbf{Class Features} & \textbf{Carnal Invocations} & \textbf{Cantrips} & \textbf{Prepared Spells} & \textbf{Spell Slots} & \textbf{Slot Level}\\
+ 1                & +2 & Carnal Invocations, Magic of Flesh & 2 & 2 & 2 & 1 & 1 \\
+ 2                & +2 & Hemorrhage & 3 & 2 & 3 & 1 & 2 \\
+ 3                & +2 & Blood channelling, Spells of a mortal vessel & 5 & 2 & 4 & 1 & 3 \\
+  \end{tabularx}
+\end{table*}
+
 \subsubsection{Level 1: Magic Of Flesh}
 
 You gain spell-casting. See chapter 7 for the rules on Spellcasting. The information below details how you use those rules with Blood Mage spells, which appear in the Blood Mage spell list later in the class's description.
 
 \paragraph{Cantrips} You know two cantrips of your choice. Whenever you gain a Blood Mage level, you can replace one of your cantrips from this feature with another cantrip of your choice.
-
-When you reach Blood Mage level 4, you learn another cantrip of your choice, as shown in the Cantrips column of the Blood Mage features table.
 
 \paragraph{Spell Slots} The Blood Mage features table shows how many spell slots you have to cast your Blood Mage spells of levels 1-2. The table also shows the level of those slots, all of which are the same level. 
 
@@ -141,22 +171,6 @@ The number of spells on your list increases as you gain Blood Mage levels, as sh
 If another Blood Mage feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Blood Mage spells for you.
 
 
-\tikz[remember picture,overlay, blend mode=multiply] \node[anchor=north, inner sep=-5pt] at (current page.north) {\includegraphics[scale=1.35]{resources/Blood_mage_top.png}};
-
-\begin{table*}[ht]
-  \includegraphics[scale=1.0]{resources/Blood_mage_top_tranparent.png}
-
-  \caption{\DndFontTableTitle{Blood Mage Features}}\label{tab:bm_features}
-
-  \begin{tabularx}{\linewidth}{p{0.7cm}p{2cm}Xp{2cm}p{1.5cm}p{1.5cm}p{1cm}p{1cm}}
-    \textbf{Level}                  & \textbf{Proficiency bonus} & \textbf{Class Features} & \textbf{Carnal Invocations} & \textbf{Cantrips} & \textbf{Prepared Spells} & \textbf{Spell Slots} & \textbf{Slot Level}\\
- 1                & +2 & Carnal Invocations, Magic of Flesh & 1 & 2 & 2 & 1 & 1 \\
- 2                & +2 & Hemorrhage & 3 & 2 & 3 & 2 & 1 \\
- 3                & +2 & Blood channelling, Spells of a mortal vessel & 3 & 2 & 4 & 2 & 2 \\
- 4                & +2 & -- & 3 & 3 & 5 & 2 & 2 \\
-  \end{tabularx}
-\end{table*}
-
 \paragraph{Changing Your Prepared Spells} Whenever you gain a Blood Mage level, you can replace one spell on your list with another Blood Mage spell of an eligible level.
 
 \paragraph{Spellcasting Ability} Constitution is the spell-casting ability for your Blood Mage spells.
@@ -165,51 +179,53 @@ If another Blood Mage feature gives you spells that you always have prepared, th
 
 \subsubsection{Level 2: Spell Carving}
 
-Blood mage can carve spells on their own body using their skin as a makeshift Spell Scroll. Carving ritual could be done only during the Long Rest at a cost of healing. 
+Blood mage can carve spells on their own body using their skin as a makeshift Spell Scroll. Carving ritual could be done only during the Long Rest at a cost of healing and Fatigue Level removal. 
+
+
 
 \paragraph{Prerequisites} You can perform the ritual by yourself or request assistance. You can scribe any spells that you know and have prepared or, if assisted, any spell that the assisting character knows.
 Prerequisites about Scribing Spell Scroll from Player Handbook apply to either of you who knows the spell.
 
 \paragraph{Time and Cost} One Long Rest counts as one day of work(8h) the cost is the same as for usual Spell Scroll. 
+Once spell is fully carved, you gain a Fatigue Level per spell slot level of the spell.
 
 \paragraph{Casting carved spell} 
 The carved spell is used as if it's on a Spell Scroll that you can't part with. 
 Unlike the Spell Scroll you can cast it even if you don't know the spell and it still consumes a spell slot.
 If somebody else casts it, by reading it off you for example, the spell slot is not consumed, but the spell must be in their spell list.  
 
-\subsubsection{Level 3: Spells Of a Mortal Vessel}
-
-Some spells are naturally compatible with your source of magical powers, that ensures you always have certain spells ready; Upon reaching 3rd Blood Mage level, you thereafter always have this listed spells prepared.
-
-\begin{itemize}
-  \item False Life
-  \item Hellish Rebuke
-  \item Arcane Vigor
-  \item Warding Bond
-\end{itemize}
-
-\subsubsection{Level 3: Blood Channelling}
-
-You can cast a spell without expending a spell slot; however, per spell slot level, you must either receive a Fatigue Level or take 1d12 necrotic damage that can't be prevented or reduced. 
-If this action damage reduces you to 0 hit points or you lose consciousness, the spell fails. That includes carved spells from Spell Carving Trait.
-
-While you have Fatigue condition you experience the following effects.
-
-\paragraph{Fatigue Levels} This condition is cumulative. Each time you receive it, you gain 1 Fatigue Level. 
-\paragraph{Weakness} When you receive non-necrotic damage, you receive additional one necrotic damage per Fatigue Level.
-\paragraph{Decay} Your maximum health is reduced by 5 times your Fatigue Level.
-\paragraph{Removing Fatigue} Finishing Long Rest removes all your Fatigue Levels. Finishing Short Rest removes half your Fatigue levels rounded up. Succeeding Death Saving Throw removes one Fatigue Level.
+After casting the carving scars and you lose the ability to cast it again. 
 
 \begin{figure}[t]
   \includegraphics[scale=0.2]{resources/Blood_mage_corner_img_transparent.png}
 \end{figure}
 \tikz[remember picture,overlay, blend mode=multiply] \node[anchor=north west, inner sep=-3pt] at (current page.north west) {\includegraphics[scale=0.25]{resources/Blood_mage_corner_img.png}};
 
+\subsubsection{Level 3: Spells Of a Mortal Vessel}
+
+Some spells are naturally compatible with your source of magical powers, that ensures you always have certain spells ready; Upon reaching 3rd Blood Mage level, you thereafter always have this listed spells prepared.
+
+\begin{itemize}
+  % level 1
+  \item False Life
+  \item Hellish Rebuke
+  % level 2
+  \item Warding Bond
+  \item Arcane Vigor
+  % level 3
+  \item Counterspell
+\end{itemize}
+
+\subsubsection{Level 3: Blood Channelling}
+
+You can cast spells without expending a spell slot; however, per spell slot level, you must either receive a Fatigue Level or take 1d12 necrotic damage. 
+If this action damage reduces you to 0 hit points or you lose consciousness, the spell fails. That includes carved spells from Spell Carving Trait.
+
 \subsection{Carnal Invocation Options}
 
 \subsubsection{Blood Is the Ultimate Sacrifice}
 
-When casting a spell, you can choose to forego its material component. Take 1d12 necrotic damage per 50 GP of material. This damage can’t be reduced or prevented. 
+When casting a spell, you can choose to forego its material component. Take 1d12 necrotic damage per 50 GP of material.
 If this damage reduces you to 0 hit points, the spell fails, but the spell slot is not expended.
 
 \subsubsection{Wounds Mean Nothing To Me}
@@ -240,7 +256,7 @@ As a Bonus Action, Blood Mage can touch a willing creature that is not full heal
 
 \subsubsection{Pain Tribute Symbol}
 
-As a Magical Action, Blood Mage can hurt themselves to reinforce a piece of equipment by drawing powers within his body. Blood Mage receives 1d8 damage and draws a symbol on a chosen surface, increasing its durability.
+As a Magical Action, Blood Mage can hurt themselves to reinforce a piece of equipment by drawing powers from within his body. Blood Mage receives 1d8 damage and draws a symbol on a chosen surface, increasing its durability.
 
 If it is a shield or a piece of armor, the wearer receives +1 AC. 
 
@@ -306,6 +322,19 @@ Duration: 1 hour?
  Shatter & Evocation & -- \\
  Heat Metal & Transmutation & C \\
  Misty Step & Conjugation & -- \\
+\end{DndTable}
+
+\begin{DndTable}[header=Level 3 Blood Mage Spells]{XXX}
+ Spell  & School & Special \\
+ Counterspell & Abjuration & -- \\
+ Call Lightning & Conjugation & C \\
+ Dispel Magic & Conjugation & -- \\
+ Glyph of Warding & Abjuration & -- \\
+ Revivify & Necromancy & -- \\
+ Fireball & Evocation & -- \\
+ Feign Death & Necromancy & R \\
+ Remove Curse & Abjuration & -- \\
+
 \end{DndTable}
 
 \maketitle
